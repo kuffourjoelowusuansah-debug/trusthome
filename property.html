@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Property Details — TrustHome Ghana</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app detail-with-stickybar" id="propertyApp">
+
+  <!-- ===================== GALLERY ===================== -->
+  <div class="gallery">
+    <div class="gallery-header">
+      <a href="index.html" class="gallery-icon-btn" aria-label="Back to listings">[BACK_ICON]</a>
+      <div style="display:flex; gap:8px;">
+        <button class="gallery-icon-btn" id="shareBtn" aria-label="Share listing">[SHARE_ICON]</button>
+        <button class="gallery-icon-btn" id="saveBtn" aria-label="Save listing">[HEART_ICON]</button>
+      </div>
+    </div>
+    <div class="gallery-main">
+      <img id="mainImage" src="" alt="Property photo">
+    </div>
+    <div class="gallery-counter" id="galleryCounter">1 / 1</div>
+  </div>
+
+  <div class="thumb-row" id="thumbRow"><!-- thumbnails injected by JS --></div>
+
+  <!-- ===================== DETAILS ===================== -->
+  <div class="detail-content">
+
+    <div class="detail-top-row">
+      <div class="detail-price" id="detailPrice"></div>
+      <div class="type-badge" id="detailTypeBadge"></div>
+    </div>
+
+    <h1 class="detail-title" id="detailTitle"></h1>
+    <div class="detail-location">[PIN_ICON] <span id="detailLocation"></span></div>
+
+    <div class="verified-banner" id="verifiedBanner">
+      [SHIELD_ICON]
+      <div class="verified-banner-text">
+        This landlord's identity and property documents have been reviewed by the TrustHome team.
+      </div>
+    </div>
+
+    <div>
+      <h2 class="detail-section-title">Description</h2>
+      <p class="detail-description" id="detailDescription"></p>
+    </div>
+
+    <div class="amenity-grid" id="amenityGrid"><!-- injected by JS --></div>
+
+    <hr class="divider">
+
+    <div>
+      <h2 class="detail-section-title">Listed by</h2>
+      <div class="landlord-card">
+        <div class="landlord-avatar" id="landlordAvatar"></div>
+        <div class="landlord-info">
+          <div class="landlord-name" id="landlordName"></div>
+          <div class="landlord-meta" id="landlordMeta"></div>
+        </div>
+        <a href="#" class="btn-icon-square" id="callBtn" aria-label="Call landlord">[PHONE_ICON]</a>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="detail-section-title mt-4">Location</h2>
+      <div class="map-preview" id="mapPreview">
+        [PIN_ICON] <span id="mapLabel">Map preview unavailable in demo</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== STICKY CTA ===================== -->
+  <div class="sticky-cta-bar">
+    <a href="tel:" id="callBtnBottom" class="btn-icon-square" aria-label="Call landlord">[PHONE_ICON]</a>
+    <a href="#" id="whatsappBtn" class="btn btn-whatsapp" target="_blank" rel="noopener">
+      [WHATSAPP_ICON] Chat on WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<!-- ===================== NOT FOUND STATE ===================== -->
+<div class="app hidden" id="notFoundApp">
+  <div class="empty-state" style="padding-top:80px;">
+    [EMPTY_ICON]
+    <h3>Property not found</h3>
+    <p>This listing may have been removed or the link is incorrect.</p>
+    <a href="index.html" class="btn btn-primary mt-4" style="display:inline-flex;">Back to listings</a>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/property.js"></script>
+</body>
+</html>

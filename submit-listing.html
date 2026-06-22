@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>List Your Property — TrustHome Ghana</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app" id="formApp">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header">
+    <div class="back-row">
+      <a href="index.html" class="back-btn" aria-label="Back to listings">[BACK_ICON]</a>
+      <div>
+        <div class="page-title">List your property</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== FORM ===================== -->
+  <div class="form-page">
+
+    <div class="form-intro">
+      <p>Fill in the details below and tenants will be able to find your property and contact you directly on WhatsApp or phone. It takes about two minutes.</p>
+    </div>
+
+    <form class="form-card" id="listingForm" novalidate>
+
+      <!-- Title -->
+      <div class="form-field" id="fieldTitle">
+        <label for="inputTitle">Property title</label>
+        <input type="text" id="inputTitle" class="text-input" placeholder="e.g. Single Room Self-Contain, Ahodwo" maxlength="80">
+        <p class="form-error">Please give your property a short, clear title.</p>
+      </div>
+
+      <!-- Property type -->
+      <div class="form-field" id="fieldType">
+        <label>Property type</label>
+        <div class="type-select-grid">
+          <label class="type-select-option" data-type="Shop">
+            <input type="radio" name="propertyType" value="Shop">
+            [SHOP_ICON]
+            <span>Shop</span>
+          </label>
+          <label class="type-select-option" data-type="Room">
+            <input type="radio" name="propertyType" value="Room">
+            [ROOM_ICON]
+            <span>Room</span>
+          </label>
+          <label class="type-select-option" data-type="Hostel">
+            <input type="radio" name="propertyType" value="Hostel">
+            [HOSTEL_ICON]
+            <span>Hostel</span>
+          </label>
+        </div>
+        <p class="form-error">Please select a property type.</p>
+      </div>
+
+      <!-- Price -->
+      <div class="form-field" id="fieldPrice">
+        <label for="inputPrice">Price</label>
+        <div class="input-with-prefix">
+          <span class="input-prefix">GH₵</span>
+          <input type="number" id="inputPrice" placeholder="0.00" min="0" step="1">
+        </div>
+        <p class="hint">Enter the amount tenants pay per period (e.g. per month or per semester).</p>
+        <p class="form-error">Please enter a valid price.</p>
+      </div>
+
+      <!-- Price period -->
+      <div class="form-field" id="fieldPeriod">
+        <label for="inputPeriod">Billing period</label>
+        <select id="inputPeriod" class="select-input">
+          <option value="month">Per month</option>
+          <option value="semester">Per semester</option>
+          <option value="year">Per year</option>
+        </select>
+      </div>
+
+      <!-- Location -->
+      <div class="form-field" id="fieldLocation">
+        <label for="inputLocation">Location</label>
+        <input type="text" id="inputLocation" class="text-input" placeholder="e.g. Ahodwo, Kumasi">
+        <p class="form-error">Please enter the property's location.</p>
+      </div>
+
+      <!-- Phone number -->
+      <div class="form-field" id="fieldPhone">
+        <label for="inputPhone">WhatsApp / phone number</label>
+        <div class="input-with-prefix">
+          <span class="input-prefix">+233</span>
+          <input type="tel" id="inputPhone" placeholder="24 123 4567" inputmode="numeric">
+        </div>
+        <p class="hint">Tenants will use this number to reach you on WhatsApp and by call.</p>
+        <p class="form-error">Please enter a valid Ghanaian phone number.</p>
+      </div>
+
+      <!-- Description -->
+      <div class="form-field" id="fieldDescription">
+        <label for="inputDescription">Description</label>
+        <textarea id="inputDescription" class="textarea-input" placeholder="Describe the property — size, condition, nearby landmarks, what's included..." maxlength="600"></textarea>
+        <p class="form-error">Please add a short description.</p>
+      </div>
+
+      <!-- Photo upload -->
+      <div class="form-field mb-0" id="fieldPhotos">
+        <label>Photos</label>
+        <div class="photo-upload-zone" id="photoUploadZone">
+          [UPLOAD_ICON]
+          <div><strong>Tap to upload</strong> property photos</div>
+          <p class="hint">Add at least 1 photo. Clear, well-lit photos get more responses.</p>
+        </div>
+        <input type="file" id="photoInput" accept="image/*" multiple hidden>
+        <div class="photo-preview-grid" id="photoPreviewGrid"></div>
+        <p class="form-error">Please add at least one photo.</p>
+      </div>
+
+    </form>
+
+    <div class="form-footer-note">
+      [SHIELD_ICON]
+      <p>Your number is only shared with tenants who view this listing. TrustHome never sells your contact details to third parties or investors.</p>
+    </div>
+
+    <button type="submit" form="listingForm" class="btn btn-primary btn-block" id="submitBtn">Publish listing</button>
+  </div>
+
+</div>
+
+<!-- ===================== SUCCESS SCREEN ===================== -->
+<div class="app hidden" id="successApp">
+  <div class="success-screen">
+    <div class="success-icon">[CHECK_ICON]</div>
+    <h2>Listing submitted!</h2>
+    <p>Your property has been added to TrustHome Ghana. Tenants in your area can now find and contact you directly.</p>
+    <a href="index.html" class="btn btn-primary">Back to listings</a>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/submit.js"></script>
+</body>
+</html>
